@@ -6,7 +6,7 @@ function Counter({ users }) {
   const [count, setCount] = useState(0);
   return (
     <div>
-      There are {users.length} users
+      <p>There are {users.length} users</p>
       <button onClick={() => setCount((i) => i + 1)}>{count}</button>;
     </div>
   );
