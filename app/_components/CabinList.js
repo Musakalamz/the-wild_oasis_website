@@ -3,10 +3,11 @@ import { getCabins } from "@/app/_lib/data-service";
 import { unstable_noStore as noStore } from "next/cache";
 
 async function CabinList() {
-  noStore();
+  // noStore();
+
   // CHANGE
   const cabins = await getCabins();
-  console.log(cabins);
+  // console.log(cabins);
 
   if (!cabins.length) return null;
 
