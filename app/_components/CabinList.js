@@ -30,6 +30,7 @@ async function CabinList({ filter }) {
       {/* {cabins.map((cabin) => (
         <CabinCard cabin={cabin} key={cabin.id} />
       ))} */}
+
       {displayedCabins.map((cabin) => (
         <CabinCard cabin={cabin} key={cabin.id} />
       ))}
