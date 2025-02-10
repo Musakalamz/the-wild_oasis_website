@@ -1,21 +1,19 @@
 import { Suspense } from "react";
 import CabinList from "../_components/CabinList";
-import Spinner from "@/app/_components/Spinner";
+import Spinner from "../_components/Spinner";
+import Counter from "../_components/Counter";
 import Filter from "../_components/Filter";
+import ReservationReminder from "../_components/ReservationReminder";
 
-// export const revalidate = 0;
-// export const revalidate = 15;
 export const revalidate = 3600;
+// export const revalidate = 15;
 
 export const metadata = {
   title: "Cabins",
 };
 
 export default function Page({ searchParams }) {
-  console.log(searchParams);
-
   const filter = searchParams?.capacity ?? "all";
-  console.log(filter);
 
   return (
     <div>
@@ -37,6 +35,7 @@ export default function Page({ searchParams }) {
 
       <Suspense fallback={<Spinner />} key={filter}>
         <CabinList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );

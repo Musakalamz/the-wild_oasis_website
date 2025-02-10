@@ -4,9 +4,10 @@ import { useState } from "react";
 
 function UpdateProfileForm({ children }) {
   const [count, setCount] = useState();
+
   // CHANGE
-  const countryFlag = "ng.jpg";
-  const nationality = "nigeria";
+  const countryFlag = "pt.jpg";
+  const nationality = "portugal";
 
   return (
     <form className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col">
@@ -35,8 +36,10 @@ function UpdateProfileForm({ children }) {
             className="h-5 rounded-sm"
           />
         </div>
+
+        {children}
       </div>
-      {children}
+
       <div className="space-y-2">
         <label htmlFor="nationalID">National ID number</label>
         <input
