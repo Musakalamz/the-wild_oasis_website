@@ -7,8 +7,8 @@ export const metadata = {
 
 export default function Page() {
   // CHANGE
-  const countryFlag = "ng.jpg";
-  const nationality = "nigeria";
+  const countryFlag = "pt.jpg";
+  const nationality = "portugal";
 
   return (
     <div>
